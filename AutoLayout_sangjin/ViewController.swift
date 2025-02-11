@@ -24,50 +24,97 @@ class MyViewController: UIViewController {
     }()
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-//        self.view.backgroundColor = .blue
-        
+        self.view.backgroundColor = .white
         
         //첫번째 아이템 뷰
-        let firstView = generateCardView()
-        
-
-        
-
         self.view.addSubview(topStackView)
         
         NSLayoutConstraint.activate([
             topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             topStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
+            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20)
         ])
         
-        topStackView.addSubview(firstView)
+        topStackView.addArrangedSubview(MyCardView())
+        topStackView.addArrangedSubview(MyCardView())
+        topStackView.addArrangedSubview(MyCardView())
         
         
-//        let redView = UIView()
-//        redView.translatesAutoresizingMaskIntoConstraints = false
-//        redView.backgroundColor = UIColor.red
-//        self.view.addSubview(redView)
         
-//        //크기
-//        redView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-//        redView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-//        
-//        //위치
-//        redView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 200).isActive = true
-//        redView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
         
-//        NSLayoutConstraint.activate([
-//            redView.widthAnchor.constraint(equalToConstant: 100),
-//            redView.heightAnchor.constraint(equalToConstant: 200),
-//            redView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            redView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 300),
-//            
-//        ])
+        
+        
+        
+        
+        
+        let leadingImgView : UIImageView = {
+            let imageView = UIImageView()
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = UIImage(systemName: "arrow.left")
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            return imageView
+        }()
+        
+        
+        
+        
+        let centerLabel : UILabel = {
+            let label = UILabel()
+            label.text = "Page 2"
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
+        
+        
+        let trailingImgView : UIImageView = {
+            let imageView = UIImageView()
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = UIImage(systemName: "arrow.right")
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            return imageView
+        }()
+        
+        
+        NSLayoutConstraint.activate([
+            leadingImgView.widthAnchor.constraint(equalToConstant: 30),
+            leadingImgView.heightAnchor.constraint(equalToConstant: 30),
+            trailingImgView.widthAnchor.constraint(equalToConstant: 30),
+            trailingImgView.heightAnchor.constraint(equalToConstant: 30)
+        ])
+        
+        
+        
+        let secondStackView : UIStackView = {
+            let stackView = UIStackView(arrangedSubviews: [
+                leadingImgView,
+                centerLabel,
+                trailingImgView
+            ])
+            stackView.spacing = 10
+            stackView.alignment = .center
+            stackView.axis = .horizontal
+            stackView.distribution = .equalCentering
+            stackView.translatesAutoresizingMaskIntoConstraints = false
+            stackView.backgroundColor = .gray
+            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+            stackView.layer.cornerRadius = 10
+            stackView.isLayoutMarginsRelativeArrangement = true
+            return stackView
+        }()
+        
+        self.view.addSubview(secondStackView)
+        
+        NSLayoutConstraint.activate([
+            secondStackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 30),
+            secondStackView.leadingAnchor.constraint(equalTo: topStackView.leadingAnchor),
+            secondStackView.trailingAnchor.constraint(equalTo: topStackView.trailingAnchor)
+        ])
         
         
     }
@@ -76,71 +123,31 @@ class MyViewController: UIViewController {
 }
 
 
-//MARK: - extention
-extension UIViewController {
+
+
+#if DEBUG
+
+import SwiftUI
+
+
+struct ViewControllerPresentable: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewCOntroller: UIViewControllerType, context: Context) {
+        
+    }
     
-    
-    fileprivate func generateCardView() -> UIView {
-        
-        let containerView = UIView()
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = .yellow
-        
-        //제목 라벨
-        let titleLabel = UILabel()
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.text = "Hello \n World!"
-        titleLabel.numberOfLines = 0 //0으로 하면 무한줄
-        
-        //"무료" 라벨
-        let freeTitleLabel = UILabel()
-        freeTitleLabel.text = "Free"
-        freeTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        //서브 타이틀 뷰
-        let freeSubView = UIView()
-        freeSubView.translatesAutoresizingMaskIntoConstraints = false
-        freeSubView.backgroundColor = .systemMint
-        
-        
-        //아이템 뷰에 제목 라벨 추가
-        containerView.addSubview(titleLabel)
-        
-        //제목 라벨 constraint 설정
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 20),
-            titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 20)
-        ])
-        
-        
-        //첫번쨰 아이템 뷰에 서브 타이틀 뷰 추가
-        containerView.addSubview(freeSubView)
-        
-        
-        //서브 타이틀 뷰 constraint 설정
-        NSLayoutConstraint.activate([
-            freeSubView.heightAnchor.constraint(equalToConstant: 50),
-            freeSubView.widthAnchor.constraint(equalToConstant: 100),
-            freeSubView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
-            freeSubView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10)
-            
-        ])
-        
-          
-          //서브 타이틀 뷰에 "무료" 라벨 추가
-          freeSubView.addSubview(freeTitleLabel)
-        
-        
-        
-        //"무료" 라벨 설정
-        NSLayoutConstraint.activate([
-            freeTitleLabel.centerXAnchor.constraint(equalTo: freeSubView.centerXAnchor),
-            freeTitleLabel.centerYAnchor.constraint(equalTo: freeSubView.centerYAnchor),
-            freeTitleLabel.topAnchor.constraint(equalTo: freeSubView.topAnchor, constant: 5),
-            freeTitleLabel.leadingAnchor.constraint(equalTo: freeSubView.leadingAnchor, constant: 5)
-        ])
-        
-        return containerView
+    func makeUIViewController(context: Context) -> some UIViewController {
+        MyViewController()
     }
     
 }
+
+struct ViewControllerPresentablePreviews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerPresentable()
+            .ignoresSafeArea()
+    }
+}
+
+
+
+#endif
