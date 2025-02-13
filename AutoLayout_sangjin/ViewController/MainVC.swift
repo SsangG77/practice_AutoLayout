@@ -17,9 +17,9 @@ class MainVC : UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         
-        setupScrollViewDefault()
+//        setupScrollViewDefault()
         
-//        setupScrollViewSnp()
+        setupScrollViewSnp()
     }
     
 }
@@ -30,61 +30,13 @@ extension MainVC {
     
     /// 스냅킷 스크롤뷰 셋업
     fileprivate func setupScrollViewSnp() {
+        
         let fakery = Faker(locale : "ko")
  
-        
-        let contentLabel = UILabel().then { l in
-            l.numberOfLines = 0
-            l.text = fakery.lorem.paragraphs(amount: 50)
-        }
-      
-        contentLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(20)
-        }
-      
-        
-        let containerView = UIView().then { container in
-            container.backgroundColor = .yellow
-            container.addSubview(contentLabel)
-        }
-        
-        
-       
-        
-        let scrollView = UIScrollView().then { sc in
-            sc.alwaysBounceVertical = true
-            sc.isUserInteractionEnabled = true
-            sc.addSubview(containerView)
-        }
-        
-       
-        
-       
-        containerView.snp.makeConstraints { make in
-            make.edges.equalTo(scrollView.contentLayoutGuide.snp.edges)
-            make.width.equalTo(scrollView.frameLayoutGuide.snp.width)
-        }
-        
-        
-        
-        self.view.addSubview(scrollView)
-        
-        
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-        
-    }
-    
-    /// 기본 스크롤뷰 셋업
-    fileprivate func setupScrollViewDefault() {
-        let fakery = Faker(locale : "ko")
- 
-        
-        let contentLabel = UILabel().then { l in
-            l.numberOfLines = 0
-            l.translatesAutoresizingMaskIntoConstraints = false
-            l.text = fakery.lorem.paragraphs(amount: 50)
+        let contentLabel = UILabel().then {
+            $0.numberOfLines = 0
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.text = fakery.lorem.paragraphs(amount: 1)
         }
      
         let topStackView = UIStackView().then {
@@ -98,28 +50,38 @@ extension MainVC {
             $0.addArrangedSubview(MyCardView())
         }
         
-        let zebraView = ZebraView()
         
+        
+        let tspaceSubscribeView = TspaceSubscribeView()
+        let tspacePassItem = TspacePassItem()
         
         let containerView = UIView().then { container in
             container.translatesAutoresizingMaskIntoConstraints = false
-            container.backgroundColor = .yellow
+            
            
-            container.addSubview(zebraView)
+            container.addSubview(tspaceSubscribeView)
+            container.addSubview(tspacePassItem)
             container.addSubview(topStackView)
             container.addSubview(contentLabel)
         }
         
-        NSLayoutConstraint.activate([
-            zebraView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            zebraView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1),
-            zebraView.topAnchor.constraint(equalTo: containerView.topAnchor)
-        ])
+        tspaceSubscribeView.snp.makeConstraints { make in
+            make.centerX.equalTo(containerView.snp.centerX)
+            make.top.equalTo(containerView.snp.top).offset(10)
+            make.width.equalTo(containerView.snp.width)
+        }
+        
+        tspacePassItem.snp.makeConstraints { make in
+            make.centerX.equalTo(containerView.snp.centerX)
+            make.top.equalTo(tspaceSubscribeView.snp.bottom).offset(20)
+            make.width.equalTo(containerView.snp.width)
+        }
+        
         
         NSLayoutConstraint.activate([
             topStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            topStackView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1),
-            topStackView.topAnchor.constraint(equalTo: zebraView.topAnchor)
+            topStackView.widthAnchor.constraint(equalTo: containerView.widthAnchor),
+            topStackView.topAnchor.constraint(equalTo: tspacePassItem.bottomAnchor, constant: 30)
         ])
         
       
@@ -127,7 +89,90 @@ extension MainVC {
             contentLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
             contentLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             contentLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            contentLabel.topAnchor.constraint(equalTo: topStackView.bottomAnchor)
+            contentLabel.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 30)
+           
+        ])
+      
+     
+        let scrollView = UIScrollView().then { sc in
+            sc.alwaysBounceVertical = true
+            sc.isUserInteractionEnabled = true
+            sc.translatesAutoresizingMaskIntoConstraints = false
+            sc.addSubview(containerView)
+        }
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().offset(10)
+            make.width.equalTo(scrollView.frameLayoutGuide.snp.width).multipliedBy(0.95)
+            make.centerX.equalTo(scrollView.snp.centerX)
+        }
+        
+        self.view.addSubview(scrollView)
+ 
+        scrollView.snp.makeConstraints{ make in
+            make.edges.equalToSuperview()
+        }
+        
+    } // setupScrollViewSnp
+    
+    /// 기본 스크롤뷰 셋업
+    fileprivate func setupScrollViewDefault() {
+        let fakery = Faker(locale : "ko")
+ 
+        
+        let contentLabel = UILabel().then { l in
+            l.numberOfLines = 0
+            l.translatesAutoresizingMaskIntoConstraints = false
+            l.text = fakery.lorem.paragraphs(amount: 1)
+        }
+     
+        let topStackView = UIStackView().then {
+            $0.axis = .horizontal
+            $0.alignment = .center
+            $0.spacing = 20
+            $0.distribution = .fillEqually
+            $0.translatesAutoresizingMaskIntoConstraints = false
+            $0.addArrangedSubview(MyCardView())
+            $0.addArrangedSubview(MyCardView())
+            $0.addArrangedSubview(MyCardView())
+        }
+        
+        
+        
+        let tspaceSubscribeView = TspaceSubscribeView()
+        
+        let containerView = UIView().then { container in
+            container.translatesAutoresizingMaskIntoConstraints = false
+//            container.backgroundColor = .yellow
+            
+           
+            container.addSubview(tspaceSubscribeView)
+            container.addSubview(topStackView)
+            container.addSubview(contentLabel)
+        }
+        
+        
+        
+        NSLayoutConstraint.activate([
+            tspaceSubscribeView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            tspaceSubscribeView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
+            tspaceSubscribeView.widthAnchor.constraint(equalTo: containerView.widthAnchor)
+        ])
+        
+        
+        
+        NSLayoutConstraint.activate([
+            topStackView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            topStackView.widthAnchor.constraint(equalTo: containerView.widthAnchor, multiplier: 1),
+            topStackView.topAnchor.constraint(equalTo: tspaceSubscribeView.bottomAnchor, constant: 30)
+        ])
+        
+      
+        NSLayoutConstraint.activate([
+            contentLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            contentLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            contentLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            contentLabel.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 30)
            
         ])
       
@@ -165,7 +210,7 @@ extension MainVC {
             scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
         
-    }
+    } // setupScrollViewDefault
 }
 
 

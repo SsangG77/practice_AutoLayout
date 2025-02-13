@@ -20,9 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = MyViewController()
+//        let viewController =  /*ZebraViewController()*/
         
-//        window?.rootViewController = viewController
         window?.rootViewController = MainVC()
         window?.makeKeyAndVisible()
         

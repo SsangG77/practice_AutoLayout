@@ -15,22 +15,9 @@ class MyViewController: UIViewController {
 
   
     
-    lazy var topStackView = UIStackView().then { topStackView in
-        topStackView.spacing = 10
-        topStackView.alignment = .center
-        topStackView.axis = .horizontal
-        topStackView.distribution = .fillEqually
-        topStackView.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    let zebraView = ZebraView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        self.view.addSubview(zebraView)
-       
         
     }
 

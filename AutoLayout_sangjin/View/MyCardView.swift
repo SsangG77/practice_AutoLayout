@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MyCardView : UIView {
+class MyCardView : CustomView {
     
     override init(frame: CGRect) { //UIView 의 생성자를 상속받음
         super.init(frame: frame)
@@ -24,12 +24,9 @@ class MyCardView : UIView {
     fileprivate func setupLayout() {
         
         self.layer.cornerRadius = 10
+        self.hasShadow = true
         self.translatesAutoresizingMaskIntoConstraints = false
-        
-//        NSLayoutConstraint.activate([
-//            self.widthAnchor.constraint(equalToConstant: 100),
-//            self.heightAnchor.constraint(equalToConstant: 200)
-//        ])
+       
         
         //제목 라벨
         let titleLabel = UILabel()
@@ -77,8 +74,6 @@ class MyCardView : UIView {
         self.addSubview(titleLabel)
         
         self.addSubview(subTitleLabelBg)
-        
-        
         self.addSubview(bottomImageView)
         
         
