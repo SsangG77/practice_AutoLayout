@@ -26,8 +26,6 @@ class TspaceSubscribeView : CustomView {
     
     
     fileprivate func setupLayout() {
-       
-        
         self.translatesAutoresizingMaskIntoConstraints = false
         self.layer.cornerRadius = 30
         self.backgroundColor = .black
@@ -92,12 +90,13 @@ class TspaceSubscribeView : CustomView {
             make.width.equalToSuperview()
         }
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(subTitleLabel.snp.bottom).inset(5)
+            make.top.equalTo(subTitleLabel.snp.bottom).offset(10)
             make.leading.equalTo(subTitleLabel.snp.leading)
         }
         imageView.snp.makeConstraints { make in
             make.trailing.equalTo(self.snp.trailing).inset(30)
-            make.top.equalTo(titleLabel.snp.bottom).inset(5)
+            make.bottom.equalTo(self.snp.bottom).inset(30)
+//            make.top.equalTo(titleLabel.snp.bottom).inset(5)
         }
         
         

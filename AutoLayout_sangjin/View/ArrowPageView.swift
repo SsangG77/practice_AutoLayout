@@ -24,23 +24,6 @@ class ArrowPageView : UIStackView {
     
     fileprivate func setupLayout() {
         
-//        let secondStackView : UIStackView = {
-//            let stackView = UIStackView(arrangedSubviews: [
-//                leadingImgView,
-//                centerLabel,
-//                trailingImgView
-//            ])
-//            stackView.spacing = 10
-//            stackView.alignment = .center
-//            stackView.axis = .horizontal
-//            stackView.distribution = .equalCentering
-//            stackView.translatesAutoresizingMaskIntoConstraints = false
-//            stackView.backgroundColor = .gray
-//            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
-//            stackView.layer.cornerRadius = 10
-//            stackView.isLayoutMarginsRelativeArrangement = true
-//            return stackView
-//        }()
         
             self.spacing = 10
             self.alignment = .center
@@ -52,14 +35,6 @@ class ArrowPageView : UIStackView {
             self.layer.cornerRadius = 10
             self.isLayoutMarginsRelativeArrangement = true
         
-        
-        //        let leadingImgView : UIImageView = {
-        //            let imageView = UIImageView()
-        //            imageView.contentMode = .scaleAspectFit
-        //            imageView.image = UIImage(systemName: "arrow.left")
-        //            imageView.translatesAutoresizingMaskIntoConstraints = false
-        //            return imageView
-        //        }()
         let leadingImgView = UIImageView().then { imageView in
             imageView.contentMode = .scaleAspectFit
             imageView.image = UIImage(systemName: "arrow.left")
@@ -67,12 +42,6 @@ class ArrowPageView : UIStackView {
         }
         
 
-        //        let centerLabel : UILabel = {
-        //            let label = UILabel()
-        //            label.text = "Page 2"
-        //            label.translatesAutoresizingMaskIntoConstraints = false
-        //            return label
-        //        }()
         let centerLabel = UILabel().then { label in
             label.text = "page 2"
             label.translatesAutoresizingMaskIntoConstraints = false
