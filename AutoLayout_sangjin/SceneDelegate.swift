@@ -20,12 +20,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-//        let viewController =  /*ZebraViewController()*/
-        
-        window?.rootViewController = MainVC()
+//        window?.rootViewController = MainVC()
         window?.makeKeyAndVisible()
         
         window?.windowScene = windowScene
+        
+        let storyBoard = true
+        if storyBoard == true {
+            
+            window = UIWindow(windowScene: windowScene)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateInitialViewController()
+            
+            window?.rootViewController = initialViewController
+            window?.makeKeyAndVisible()
+        }
         
         
         
