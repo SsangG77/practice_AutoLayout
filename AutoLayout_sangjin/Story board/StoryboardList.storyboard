@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--StoryBoard-->
+        <scene sceneID="A7P-Py-qkQ">
+            <objects>
+                <viewController storyboardIdentifier="StoryBoardListVC" title="StoryBoard" id="nxN-iv-6pm" customClass="StoryBoardListVC" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pKV-xU-YBK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ayS-mk-CYz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryBoardCell" rowHeight="157" id="X67-1n-Tgm" customClass="StoryBoardCell" customModule="AutoLayout_sangjin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X67-1n-Tgm" id="l6Y-1k-izH">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koo-Vs-YpY">
+                                                    <rect key="frame" x="10" y="10" width="373" height="18"/>
+                                                    <string key="text">대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다.
+
+국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다. 대한민국의 국민이 되는 요건은 법률로 정한다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" verticalCompressionResistancePriority="740" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJE-tG-Puw" userLabel="body Label">
+                                                    <rect key="frame" x="10" y="38" width="373" height="109"/>
+                                                    <string key="text">대통령은 국가의 원수이며, 외국에 대하여 국가를 대표한다. 모든 국민의 재산권은 보장된다. 그 내용과 한계는 법률로 정한다. 국무회의는 정부의 권한에 속하는 중요한 정책을 심의한다.
+
+국회는 법률에 저촉되지 아니하는 범위안에서 의사와 내부규율에 관한 규칙을 제정할 수 있다. 대한민국의 국민이 되는 요건은 법률로 정한다. 대통령은 조국의 평화적 통일을 위한 성실한 의무를 진다.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UJE-tG-Puw" firstAttribute="top" secondItem="Koo-Vs-YpY" secondAttribute="bottom" constant="10" id="6aT-bi-hY7"/>
+                                                <constraint firstItem="UJE-tG-Puw" firstAttribute="leading" secondItem="Koo-Vs-YpY" secondAttribute="leading" id="7Nj-Ud-IJn"/>
+                                                <constraint firstItem="Koo-Vs-YpY" firstAttribute="leading" secondItem="l6Y-1k-izH" secondAttribute="leading" constant="10" id="9Yl-q1-hpu"/>
+                                                <constraint firstItem="Koo-Vs-YpY" firstAttribute="top" secondItem="l6Y-1k-izH" secondAttribute="top" constant="10" id="JeY-sr-w59"/>
+                                                <constraint firstAttribute="bottom" secondItem="UJE-tG-Puw" secondAttribute="bottom" constant="10" id="NP9-LC-g0R"/>
+                                                <constraint firstAttribute="trailing" secondItem="UJE-tG-Puw" secondAttribute="trailing" constant="10" id="OQd-Ug-Caw"/>
+                                                <constraint firstAttribute="trailing" secondItem="Koo-Vs-YpY" secondAttribute="trailing" constant="10" id="Zjv-S8-nsd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="UJE-tG-Puw" id="Ai1-cf-uIN"/>
+                                            <outlet property="titleLabel" destination="Koo-Vs-YpY" id="WcI-nK-kr3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nCO-HF-jJb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nCO-HF-jJb" firstAttribute="trailing" secondItem="ayS-mk-CYz" secondAttribute="trailing" id="dB3-N7-kII"/>
+                            <constraint firstItem="ayS-mk-CYz" firstAttribute="top" secondItem="nCO-HF-jJb" secondAttribute="top" id="h1C-Pq-SkM"/>
+                            <constraint firstItem="ayS-mk-CYz" firstAttribute="leading" secondItem="nCO-HF-jJb" secondAttribute="leading" id="xnn-DP-nyc"/>
+                            <constraint firstItem="nCO-HF-jJb" firstAttribute="bottom" secondItem="ayS-mk-CYz" secondAttribute="bottom" id="zfO-22-18N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="821-Yu-iEp"/>
+                    <connections>
+                        <outlet property="myTableView" destination="ayS-mk-CYz" id="zO3-lt-Dk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZq-uN-dpm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3963" y="-1115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

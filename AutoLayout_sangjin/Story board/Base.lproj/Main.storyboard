@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wcu-k2-dSE">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DefaultListVC-->
+        <scene sceneID="m0y-tC-xZa">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DefaultListVC" storyboardName="DefaultListVC" referencedIdentifier="DefaultListVC" id="qxJ-ma-tbM" userLabel="DefaultListVC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vN8-dI-6WV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66r-bP-rwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2467" y="-774"/>
+        </scene>
+        <!--StoryBoardListVC-->
+        <scene sceneID="b7f-2r-gdC">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="StoryBoardListVC" storyboardName="StoryboardList" referencedIdentifier="StoryBoardListVC" id="fCK-7U-zAV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VxP-km-gCk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xs2-NQ-Bv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2487" y="-692"/>
+        </scene>
+        <!--NibListVCViewController-->
+        <scene sceneID="kop-eJ-s49">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NibListVCViewController" storyboardName="Nib" referencedIdentifier="NibListVCViewController" id="ekh-bL-Uhp" userLabel="NibListVCViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qAM-ay-aSG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyE-we-g6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2518" y="-627"/>
+        </scene>
+        <!--CodeListVC-->
+        <scene sceneID="84v-zY-Tp3">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CodeListVC" storyboardName="Code" referencedIdentifier="CodeListVC" id="Arz-jp-CX8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4tu-Yd-X8O"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67i-Hi-4Dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2457" y="-546"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ega-Zb-tfQ">
+            <objects>
+                <viewController id="nQc-vG-6cO" customClass="MainViewController" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MTq-Lu-eOj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-WP-E7c">
+                                <rect key="frame" x="141" y="332" width="111.33333333333331" height="257.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s1-9n-E7P">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Default"/>
+                                        <connections>
+                                            <segue destination="qxJ-ma-tbM" kind="show" id="RYj-7x-cfJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gh-7F-jpz">
+                                        <rect key="frame" x="0.0" y="74.333333333333314" width="111.33333333333333" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="story board"/>
+                                        <connections>
+                                            <segue destination="fCK-7U-zAV" kind="show" id="Q9P-Hr-8M4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-47-5D9">
+                                        <rect key="frame" x="0.0" y="148.66666666666669" width="111.33333333333333" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Nib"/>
+                                        <connections>
+                                            <segue destination="ekh-bL-Uhp" kind="show" id="cej-cI-FET"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCb-qv-3QD">
+                                        <rect key="frame" x="0.0" y="223" width="111.33333333333333" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="code"/>
+                                        <connections>
+                                            <segue destination="Arz-jp-CX8" kind="show" id="mK1-SA-Gen"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ong-Go-tGc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lZb-WP-E7c" firstAttribute="centerX" secondItem="Ong-Go-tGc" secondAttribute="centerX" id="EGN-gb-2VE"/>
+                            <constraint firstItem="lZb-WP-E7c" firstAttribute="centerY" secondItem="Ong-Go-tGc" secondAttribute="centerY" id="J8W-j7-Sgx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f9Y-qO-BjU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMS-pQ-Qo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.2824427480916" y="-673.23943661971839"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pgN-re-nle">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wcu-k2-dSE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LNy-oU-7Oh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nQc-vG-6cO" kind="relationship" relationship="rootViewController" id="3fY-1I-Gu2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKb-0L-tZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="-673"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
