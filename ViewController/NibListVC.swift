@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NibListVCViewController: UIViewController {
+class NibListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

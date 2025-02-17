@@ -11,8 +11,7 @@
         <!--Nib-->
         <scene sceneID="TdJ-ws-x3J">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ImW-uO-inP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="NibListVCViewController" title="Nib" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4tI-LV-2jl" customClass="NibListVCViewController" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NibListVCViewController" title="Nib" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4tI-LV-2jl" customClass="NibListVC" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEK-Em-j6h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +20,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rLv-oW-Omh"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ImW-uO-inP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3963" y="-401"/>
         </scene>

@@ -41,12 +41,22 @@
         <!--CodeListVC-->
         <scene sceneID="84v-zY-Tp3">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="CodeListVC" storyboardName="Code" referencedIdentifier="CodeListVC" id="Arz-jp-CX8" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="CodeListVC" storyboardName="CodeList" referencedIdentifier="CodeListVC" id="Arz-jp-CX8" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4tu-Yd-X8O"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67i-Hi-4Dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2457" y="-546"/>
+        </scene>
+        <!--CellConfigrationList-->
+        <scene sceneID="Jgt-U9-rFI">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CellConfigrationList" storyboardName="CellConfigrationList" referencedIdentifier="CellConfigrationList" id="wow-Eg-Y5q" userLabel="CellConfigrationList" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uXb-s3-rQV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChF-ae-77p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="-451"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ega-Zb-tfQ">
@@ -57,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-WP-E7c">
-                                <rect key="frame" x="141" y="332" width="111.33333333333331" height="257.33333333333326"/>
+                                <rect key="frame" x="141" y="294.66666666666663" width="111.33333333333331" height="331.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s1-9n-E7P">
                                         <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="34.333333333333336"/>
@@ -76,7 +86,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-47-5D9">
-                                        <rect key="frame" x="0.0" y="148.66666666666669" width="111.33333333333333" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="148.66666666666663" width="111.33333333333333" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Nib"/>
                                         <connections>
@@ -84,11 +94,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCb-qv-3QD">
-                                        <rect key="frame" x="0.0" y="223" width="111.33333333333333" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="222.99999999999994" width="111.33333333333333" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="code"/>
                                         <connections>
                                             <segue destination="Arz-jp-CX8" kind="show" id="mK1-SA-Gen"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-UB-plf">
+                                        <rect key="frame" x="0.0" y="297.33333333333331" width="111.33333333333333" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cell config"/>
+                                        <connections>
+                                            <segue destination="wow-Eg-Y5q" kind="show" id="0Uc-85-6Tk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -105,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMS-pQ-Qo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1573.2824427480916" y="-673.23943661971839"/>
+            <point key="canvasLocation" x="1578" y="-673"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pgN-re-nle">

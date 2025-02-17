@@ -27,6 +27,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		913A80372D6358FB00C22A30 /* ViewController */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		9151106A2D57B0A3008031A5 /* AutoLayout_sangjin */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -55,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				9151106A2D57B0A3008031A5 /* AutoLayout_sangjin */,
+				913A80372D6358FB00C22A30 /* ViewController */,
 				915110692D57B0A3008031A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +89,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				913A80372D6358FB00C22A30 /* ViewController */,
 				9151106A2D57B0A3008031A5 /* AutoLayout_sangjin */,
 			);
 			name = AutoLayout_sangjin;

@@ -8,17 +8,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Code-->
+        <!--CodeList-->
         <scene sceneID="rbY-fh-GJy">
             <objects>
-                <viewController storyboardIdentifier="CodeListVC" title="Code" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jc8-ar-5lf" customClass="CodeListVC" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CodeListVC" title="Code" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jc8-ar-5lf" userLabel="CodeList" customClass="CodeListVC" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5t-hn-WuR">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fl5-s1-3mc">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="smq-Tr-QZa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fl5-s1-3mc" firstAttribute="leading" secondItem="smq-Tr-QZa" secondAttribute="leading" id="9cv-Ny-xU7"/>
+                            <constraint firstItem="smq-Tr-QZa" firstAttribute="trailing" secondItem="fl5-s1-3mc" secondAttribute="trailing" id="AWA-ue-xaG"/>
+                            <constraint firstItem="fl5-s1-3mc" firstAttribute="top" secondItem="smq-Tr-QZa" secondAttribute="top" id="TZy-7k-2IM"/>
+                            <constraint firstItem="smq-Tr-QZa" firstAttribute="bottom" secondItem="fl5-s1-3mc" secondAttribute="bottom" id="W2K-Ds-rtQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yZR-1g-Nf6"/>
+                    <connections>
+                        <outlet property="myTableView" destination="fl5-s1-3mc" id="KWH-2o-YWR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cu0-5R-Mfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
