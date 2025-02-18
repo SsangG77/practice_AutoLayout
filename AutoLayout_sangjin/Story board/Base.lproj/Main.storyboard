@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66r-bP-rwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2467" y="-774"/>
+            <point key="canvasLocation" x="2466" y="-894"/>
         </scene>
         <!--StoryBoardListVC-->
         <scene sceneID="b7f-2r-gdC">
@@ -26,7 +26,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs2-NQ-Bv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2487" y="-692"/>
+            <point key="canvasLocation" x="2484" y="-846"/>
         </scene>
         <!--NibListVCViewController-->
         <scene sceneID="kop-eJ-s49">
@@ -36,7 +36,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZyE-we-g6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2518" y="-627"/>
+            <point key="canvasLocation" x="2516" y="-807"/>
         </scene>
         <!--CodeListVC-->
         <scene sceneID="84v-zY-Tp3">
@@ -46,7 +46,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67i-Hi-4Dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2457" y="-546"/>
+            <point key="canvasLocation" x="2456" y="-766"/>
         </scene>
         <!--CellConfigrationList-->
         <scene sceneID="Jgt-U9-rFI">
@@ -56,7 +56,22 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ChF-ae-77p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458" y="-451"/>
+            <point key="canvasLocation" x="2494" y="-715"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="Sn5-kV-hiZ">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7G8-bM-t4d" userLabel="SecondVC" customClass="SecondVC" customModule="AutoLayout_sangjin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="49A-yZ-YMq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sXF-l0-tPH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ChH-T1-CA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584" y="-268"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="ega-Zb-tfQ">
@@ -67,10 +82,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-WP-E7c">
-                                <rect key="frame" x="141" y="294.66666666666663" width="111.33333333333331" height="331.66666666666663"/>
+                                <rect key="frame" x="138.33333333333334" y="257.66666666666669" width="116.66666666666666" height="406.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s1-9n-E7P">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="116.66666666666667" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Default"/>
                                         <connections>
@@ -78,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gh-7F-jpz">
-                                        <rect key="frame" x="0.0" y="74.333333333333314" width="111.33333333333333" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="74.333333333333314" width="116.66666666666667" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="story board"/>
                                         <connections>
@@ -86,7 +101,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJ6-47-5D9">
-                                        <rect key="frame" x="0.0" y="148.66666666666663" width="111.33333333333333" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="148.66666666666663" width="116.66666666666667" height="34.333333333333343"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Nib"/>
                                         <connections>
@@ -94,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCb-qv-3QD">
-                                        <rect key="frame" x="0.0" y="222.99999999999994" width="111.33333333333333" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="223" width="116.66666666666667" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="code"/>
                                         <connections>
@@ -102,11 +117,19 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNd-UB-plf">
-                                        <rect key="frame" x="0.0" y="297.33333333333331" width="111.33333333333333" height="34.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="297.33333333333331" width="116.66666666666667" height="34.333333333333314"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Cell config"/>
                                         <connections>
                                             <segue destination="wow-Eg-Y5q" kind="show" id="0Uc-85-6Tk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N7-ST-Wtd">
+                                        <rect key="frame" x="0.0" y="371.66666666666669" width="116.66666666666667" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="두번째로 이동"/>
+                                        <connections>
+                                            <action selector="doSecondPushAction:" destination="nQc-vG-6cO" eventType="touchUpInside" id="uR0-gB-y2V"/>
                                         </connections>
                                     </button>
                                 </subviews>

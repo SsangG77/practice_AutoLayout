@@ -31,9 +31,6 @@ extension MainVC {
     /// 스냅킷 스크롤뷰 셋업
     fileprivate func setupScrollViewSnp() {
         
-    
-        
-        
         let tspaceSubscribeView = TspaceSubscribeView()
         let tspacePassItem = TspacePassItem()
         

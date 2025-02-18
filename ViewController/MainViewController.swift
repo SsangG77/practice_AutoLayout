@@ -17,4 +17,17 @@ class MainViewController : UIViewController {
     }
     
     
+    
+    @IBAction func doSecondPushAction(_ sender: UIButton) {
+        print(#fileID, #function, #line)
+        
+        let second = UIStoryboard(name: "SecondVC", bundle: Bundle.main)
+        if let vc = second.instantiateViewController(withIdentifier: "SecondVC") as? SecondVC {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
+    }
+    
+    
 }
